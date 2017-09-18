@@ -1,2 +1,8 @@
-<h1>Photos#popular</h1>
-<p>Find me in app/views/photos/popular.html.erb</p>
+<div id="gallery">
+  <% for photo in @photos %>
+    <figure>
+      <%= image_tag photo['image_url'] %>
+      <figcaption><%= photo['name'] %></figcaption>
+    </figure>
+  <% end %>
+</div>

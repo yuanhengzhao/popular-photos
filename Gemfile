@@ -33,13 +33,19 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Heroku-friendly Rails app configuration
+gem 'figaro'
+
 # 500px api
-gem 'f00px'
+gem 'f00px', '~> 0.4.1'
+
+gem 'omniauth' # oAuth library
+gem 'omniauth-500px' # 500px omniauth strategy
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # use rspec to test
-  gem 'rspec-rails'
+  gem 'rspec-rails', '~> 3.6'
   gem 'rspec', '~> 3.4'
 end
 

@@ -1,3 +1,24 @@
-// Place all the styles related to the photos controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+div {
+  display: flex;
+  flex-wrap: wrap;
+} 
+
+figcaption{
+	display:table-caption;
+	caption-side:bottom
+}
+
+figure {
+  display:table;
+}
+
+
+img {
+  border: none;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  background: #ccc;
+  transition: transform .2s ease-in-out;
+}
