@@ -21,6 +21,7 @@ body{
 }
 
 #gallery {
+  padding-top: 50px;
   display: flex;
   flex-wrap: wrap;
 } 
@@ -35,20 +36,16 @@ figcaption {
 }
 
 
-img {
+.figure img {
   border: none;
   max-width: 100%;
   height: auto;
   display: block;
 }
-.figure-caption {
-    display: none;
-    position: relative;
-    text-align: center;
-    top: -20px;
+.figure .details {
+  visibility: hidden;
 }
 
-img:hover .figure-caption {
-  opacity: .8;
-  display: block;
+img:hover + .figure {
+  visibility: visible;
 }
