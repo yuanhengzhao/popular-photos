@@ -36,7 +36,7 @@ gem 'jbuilder', '~> 2.5'
 # Heroku-friendly Rails app configuration
 gem 'figaro'
 # 500px api
-gem 'f00px', '~> 0.4.1'
+gem 'f00px', '~> 0.4.0'
 # oAuth library
 gem 'omniauth'
 # 500px omniauth strategy
