@@ -1,16 +1,37 @@
+/* The navigation bar */
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+}
 
-div {
+/* Links inside the navbar */
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+body{
+ margin: 0px;
+}
+
+#gallery {
   display: flex;
   flex-wrap: wrap;
 } 
 
-figcaption{
-	display:table-caption;
-	caption-side:bottom
+figure {
+  display: table;
 }
 
-figure {
-  display:table;
+figcaption {
+	display: table-caption;
+	caption-side: bottom;
 }
 
 
@@ -19,6 +40,4 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
-  background: #ccc;
-  transition: transform .2s ease-in-out;
 }

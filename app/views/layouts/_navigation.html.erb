@@ -1,0 +1,10 @@
+<nav class="navbar" role="navigation">
+	<% if user_logged_in? %>
+		<a id="user_email_name" ><%= session[:user]%></a>
+		<a><%= link_to 'Sign Out', logout_path, method: :delete %></a>
+	<% else %>
+		<a><%= link_to "Sign in", "/auth/500px" %></a>
+	<% end %>
+</nav>
+
+

@@ -1,8 +1,10 @@
+<p id="notice"><%= notice %></p>
+
 <div id="gallery">
   <% for photo in @photos %>
-    <figure>
+    <figure class="figure">
       <%= image_tag photo['image_url'] %>
-      <figcaption><%= photo['name'] %></figcaption>
+      <figcaption class="figure-caption"><%= photo['name'] %></figcaption>
     </figure>
   <% end %>
 </div>
