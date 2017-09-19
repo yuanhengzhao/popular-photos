@@ -41,3 +41,14 @@ img {
   height: auto;
   display: block;
 }
+.figure-caption {
+    display: none;
+    position: relative;
+    text-align: center;
+    top: -20px;
+}
+
+img:hover .figure-caption {
+  opacity: .8;
+  display: block;
+}

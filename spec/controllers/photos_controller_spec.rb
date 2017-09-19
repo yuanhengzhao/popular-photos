@@ -7,4 +7,13 @@ RSpec.describe PhotosController, type: :controller do
         expect(response.status).to eq(200)
 		end
 	end
+
+	describe 'likes' do
+	end
+
+	describe 'like' do
+	end
+
+	describe 'unlike' do
+	end
 end
