@@ -1,8 +1,19 @@
 <div id="gallery">
   <% for photo in @photos %>
-    <figure>
+    <figure class="figure">
       <%= image_tag photo['image_url'] %>
-      <figcaption><%= photo['name'] %></figcaption>
+      <p><%= photo['rating'] %></p>
+      <% if user_logged_in? %>
+	      <div class="details">
+          <% unless @likes.include? photo['id'] %>
+  	      	<a><%= link_to "Like", like_photo_path(photo['id']), method: :post %></a>
+          <% else %>
+  	      	<a><%= link_to "Unlike", unlike_photo_path(photo['id']), method: :delete %></a>
+          <% end %>
+          <%= photo['positive_votes_count'] %>
+	      </div>
+	  <% end %>
+      <figcaption class="figure-caption"><%= photo['name'] %></figcaption>
     </figure>
   <% end %>
 </div>

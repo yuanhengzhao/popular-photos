@@ -13,6 +13,7 @@
 # it.
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+require 'omniauth'
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
@@ -94,3 +95,16 @@ RSpec.configure do |config|
   Kernel.srand config.seed
 =end
 end
+
+OmniAuth.config.test_mode = true
+OmniAuth.config.mock_auth[:fiveHundredPx] = {
+  'provider' => 'fiveHundredPx',
+  'uid' => '123545',
+  'info' => {
+    'nickname' => 'mockuser'
+  },
+  'credentials' => {
+    'token' => 'mock_token',
+    'secret' => 'mock_secret'
+  }
+}

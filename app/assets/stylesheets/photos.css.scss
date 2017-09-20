@@ -1,0 +1,90 @@
+/* The navigation bar */
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+}
+
+/* Links inside the navbar */
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+body{
+ margin: 0px;
+}
+
+#gallery {
+  padding-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: auto;
+} 
+
+figure {
+  display: table;
+}
+a {
+  text-decoration:none;
+  color: #F5F5F5;
+}
+
+a:hover {
+  color: #FF0000;
+}
+
+figcaption {
+	display: table-caption;
+	caption-side: bottom;
+  visibility: hidden;
+  text-align: center;
+}
+
+p {
+  visibility: hidden;
+  font-size: 19px;
+  font-family: Sans-serif;
+  color: #F5F5F5;
+  position: absolute;
+  margin-top:-270px;
+  padding-left: 10px;
+}
+
+.details {
+  position: absolute;
+  margin-top:-20px;
+  padding-left:15px;
+  visibility: hidden;
+  color: #F5F5F5;
+}
+
+.figure img {
+  border: none;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+figure:hover img {
+  opacity: 0.7; 
+}
+
+figure:hover figcaption {
+  visibility: visible;
+}
+
+figure:hover p {
+  visibility: visible;
+}
+
+figure:hover .details {
+  visibility: visible;
+}

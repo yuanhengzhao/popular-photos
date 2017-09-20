@@ -35,18 +35,21 @@ gem 'jbuilder', '~> 2.5'
 
 # Heroku-friendly Rails app configuration
 gem 'figaro'
-
 # 500px api
-gem 'f00px', '~> 0.4.1'
-
-gem 'omniauth' # oAuth library
-gem 'omniauth-500px' # 500px omniauth strategy
+gem 'f00px', :git => "https://github.com/500px/f00px.git", :branch => "master"
+# oAuth library
+gem 'omniauth'
+# 500px omniauth strategy
+gem 'omniauth-500px' 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # use rspec to test
   gem 'rspec-rails', '~> 3.6'
   gem 'rspec', '~> 3.4'
+  gem 'capybara'
+  # Use factory girl to create test model
+  gem "factory_girl_rails"
 end
 
 group :development do
