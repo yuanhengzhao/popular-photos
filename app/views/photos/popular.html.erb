@@ -3,6 +3,7 @@
   <% for photo in @photos %>
     <figure class="figure">
       <%= image_tag photo['image_url'] %>
+      <a><%= link_to "Like", like_photo_path(photo['id']), method: :post %></a>
       <% if user_logged_in? %>
 	      <div class="details">
           <% unless @likes.include? photo['id'] %>

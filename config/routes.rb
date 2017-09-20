@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get 'photos/popular'
-  get 'photos/:id/like', to: 'photos#like', as: 'like_photo'
+  post 'photos/:id/like', to: 'photos#like', as: 'like_photo'
   delete 'photos/:id/unlike', to: 'photos#unlike', as: 'unlike_photo'
   root 'photos#popular'
   get '/auth/:provider/callback', to: 'sessions#create'

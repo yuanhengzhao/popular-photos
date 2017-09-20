@@ -47,6 +47,9 @@ group :development, :test do
   # use rspec to test
   gem 'rspec-rails', '~> 3.6'
   gem 'rspec', '~> 3.4'
+  gem 'capybara'
+  # Use factory girl to create test model
+  gem "factory_girl_rails"
 end
 
 group :development do
