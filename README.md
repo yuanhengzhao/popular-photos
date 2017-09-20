@@ -1,24 +1,23 @@
-# README
+# Popular Photos of 500px 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a demo to display 100 top popular photo of 500px.
 
-Things you may want to cover:
+Things you may need to know:
 
-* Ruby version
-
-* System dependencies
+* Ruby version: 2.3.1
 
 * Configuration
+Need an application.yml file
 
-* Database creation
-
-* Database initialization
-
+* Database creation & initialization
+```
+rake db:drop db:create db:migrate
+```
 * How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+rspec spec
+```
+* How to run the site
+```
+rails s
+```
