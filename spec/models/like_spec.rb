@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe Like, type: :model do
 	describe "To initalize a like" do
 		it "is invalid without user_id and photo_id" do
+			# Use 'build' instead of 'create' to avoid touching database.
   		expect(FactoryGirl.build(:like)).not_to be_valid
 		end
 

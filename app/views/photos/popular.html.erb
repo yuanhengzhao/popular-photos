@@ -1,17 +1,15 @@
-<p id="notice"><%= notice %></p>
 <div id="gallery">
   <% for photo in @photos %>
     <figure class="figure">
       <%= image_tag photo['image_url'] %>
-      <a><%= link_to "Like", like_photo_path(photo['id']), method: :post %></a>
+      <p><%= photo['rating'] %></p>
       <% if user_logged_in? %>
 	      <div class="details">
           <% unless @likes.include? photo['id'] %>
-  	      	<a><%= link_to "Like", like_photo_path(photo['id']) %></a>
+  	      	<a><%= link_to "Like", like_photo_path(photo['id']), method: :post %></a>
           <% else %>
   	      	<a><%= link_to "Unlike", unlike_photo_path(photo['id']), method: :delete %></a>
           <% end %>
-	      	<%= photo['rating'] %>
           <%= photo['positive_votes_count'] %>
 	      </div>
 	  <% end %>
