@@ -1,7 +1,7 @@
 <div id="gallery">
   <% for photo in @photos %>
     <figure class="figure">
-      <%= image_tag photo['image_url'] %>
+      <%= link_to image_tag(photo['image_url']), "https://500px.com/photo/#{photo['id']}" %>
       <p><%= photo['rating'] %></p>
       <% if user_logged_in? %>
 	      <div class="details">
