@@ -29,7 +29,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+# jquery 
+gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -41,6 +42,9 @@ gem 'f00px', :git => "https://github.com/500px/f00px.git", :branch => "master"
 gem 'omniauth'
 # 500px omniauth strategy
 gem 'omniauth-500px' 
+# Lazy loading images
+gem 'unveil-rails', '~> 0.2.1'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
